@@ -6,7 +6,7 @@ int main(){
 	stack <char> c;
 	int i;
 	string bracket;
-	getline(cin, bracket);
+	cin >> bracket;
 	for(i=0;i<bracket.length();i++){
 		if(bracket[i] == '('){
 			c.push('(');
@@ -14,7 +14,7 @@ int main(){
 		else if(bracket[i] == ')'){
 			if(c.empty()){
 				cout << "Error";
-				break;
+				return 0;
 			}
 			else{
 				c.pop();
